@@ -1,5 +1,13 @@
 import io
 import sys
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+project_root = os.path.dirname(current_dir)
+
+server_dir = os.path.join(project_root, 'server')
+sys.path.append(server_dir)
 
 from app import app
 
